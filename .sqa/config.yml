@@ -1,0 +1,76 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/TheIdentitySelector/thiss-js:
+      branch: staging
+      repo: https://github.com/TheIdentitySelector/thiss-js
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/TheIdentitySelector/thiss-js git:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-platinum-pig.sh
+        container: qc.acc_homey-firebrick-dachsbracke
+  QC.Doc:
+    repos:
+      github.com/TheIdentitySelector/thiss-js find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-harlequin-mammoth.sh
+        container: qc.doc_whiny-seashell-duck
+      github.com/TheIdentitySelector/thiss-js git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-seashell-chamois.sh
+        container: qc.doc_ugly-crimson-chow
+      github.com/TheIdentitySelector/thiss-js markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-aquamarine-walrus.sh
+        container: qc.doc_homey-saffron-panda
+      github.com/TheIdentitySelector/thiss-js restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-orange-centipede.sh
+        container: qc.doc_pretty-russet-clam
+  QC.Lic:
+    repos:
+      github.com/TheIdentitySelector/thiss-js licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-tan-hummingbird.sh
+        container: qc.lic_flabby-cerise-hyena
+  QC.Sec:
+    repos:
+      github.com/TheIdentitySelector/thiss-js bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-flax-elephant.sh
+        container: qc.sec_woolly-chocolate-slug
+  QC.Sty:
+    repos:
+      github.com/TheIdentitySelector/thiss-js flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-lavender-whippet.sh
+        container: qc.sty_snazzy-orange-walrus
+      github.com/TheIdentitySelector/thiss-js hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-cornflower-moose.sh
+        container: qc.sty_gummy-tomato-tarantula
+      github.com/TheIdentitySelector/thiss-js jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-cornflower-wolfhound.sh
+        container: qc.sty_gimpy-green-liger
+  QC.Uni:
+    repos:
+      github.com/TheIdentitySelector/thiss-js pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-amber-snake.sh
+        container: qc.uni_muzzy-magnolia-mole
+  QC.Ver:
+    repos:
+      github.com/TheIdentitySelector/thiss-js get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-magenta-argentino.sh
+        container: qc.ver_woolly-buff-mongrel
+timeout: 5400
