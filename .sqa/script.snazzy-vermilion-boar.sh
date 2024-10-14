@@ -5,5 +5,5 @@
 
 (
 cd github.com/TheIdentitySelector/thiss-js &&
-    mdl --json .
+    licensee detect . --confidence 60 --json 
 )

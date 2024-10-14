@@ -5,5 +5,5 @@
 
 (
 cd github.com/TheIdentitySelector/thiss-js &&
-    git rev-parse --is-inside-work-tree
+    mdl --json  .
 )

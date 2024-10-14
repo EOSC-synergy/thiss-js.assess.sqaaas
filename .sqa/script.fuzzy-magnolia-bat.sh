@@ -5,5 +5,5 @@
 
 (
 cd github.com/TheIdentitySelector/thiss-js &&
-    bandit -f json --quiet  --confidence-level high --severity-level high --recursive .
+    bandit -f json --quiet  --confidence-level high --severity-level high --recursive  .
 )

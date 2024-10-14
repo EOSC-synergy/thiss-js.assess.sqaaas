@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.1
+      branch: release/2.2.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/TheIdentitySelector/thiss-js:
       branch: staging
@@ -15,62 +15,62 @@ sqa_criteria:
     repos:
       github.com/TheIdentitySelector/thiss-js git:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-platinum-pig.sh
-        container: qc.acc_homey-firebrick-dachsbracke
+        - /usr/bin/env sh .sqa/script.frumpy-grey-anteater.sh
+        container: qc.acc_wiggy-fuchsia-tetra
   QC.Doc:
     repos:
       github.com/TheIdentitySelector/thiss-js find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-harlequin-mammoth.sh
-        container: qc.doc_whiny-seashell-duck
+        - /usr/bin/env sh .sqa/script.squeaky-corn-bison.sh
+        container: qc.doc_greasy-bronze-abyssinian
       github.com/TheIdentitySelector/thiss-js git:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-seashell-chamois.sh
-        container: qc.doc_ugly-crimson-chow
+        - /usr/bin/env sh .sqa/script.freaky-firebrick-flamingo.sh
+        container: qc.doc_pretty-cream-bird
       github.com/TheIdentitySelector/thiss-js markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-aquamarine-walrus.sh
-        container: qc.doc_homey-saffron-panda
+        - /usr/bin/env sh .sqa/script.muggy-heliotrope-wildebeest.sh
+        container: qc.doc_cranky-pear-dalmatian
       github.com/TheIdentitySelector/thiss-js restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-orange-centipede.sh
-        container: qc.doc_pretty-russet-clam
+        - /usr/bin/env sh .sqa/script.flaky-pumpkin-falcon.sh
+        container: qc.doc_bumpy-silver-harrier
   QC.Lic:
     repos:
       github.com/TheIdentitySelector/thiss-js licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-tan-hummingbird.sh
-        container: qc.lic_flabby-cerise-hyena
+        - /usr/bin/env sh .sqa/script.snazzy-vermilion-boar.sh
+        container: qc.lic_queasy-cream-cattle
   QC.Sec:
     repos:
       github.com/TheIdentitySelector/thiss-js bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-flax-elephant.sh
-        container: qc.sec_woolly-chocolate-slug
+        - /usr/bin/env sh .sqa/script.fuzzy-magnolia-bat.sh
+        container: qc.sec_scummy-gamboge-gecko
   QC.Sty:
     repos:
       github.com/TheIdentitySelector/thiss-js flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-lavender-whippet.sh
-        container: qc.sty_snazzy-orange-walrus
+        - /usr/bin/env sh .sqa/script.skinny-celadon-uguisu.sh
+        container: qc.sty_ugly-auburn-deer
       github.com/TheIdentitySelector/thiss-js hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-cornflower-moose.sh
-        container: qc.sty_gummy-tomato-tarantula
+        - /usr/bin/env sh .sqa/script.bumpy-cobalt-mole.sh
+        container: qc.sty_flimsy-orchid-mandrill
       github.com/TheIdentitySelector/thiss-js jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-cornflower-wolfhound.sh
-        container: qc.sty_gimpy-green-liger
+        - /usr/bin/env sh .sqa/script.surly-emerald-dingo.sh
+        container: qc.sty_blurry-cardinal-caracal
   QC.Uni:
     repos:
       github.com/TheIdentitySelector/thiss-js pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-amber-snake.sh
-        container: qc.uni_muzzy-magnolia-mole
+        - /usr/bin/env sh .sqa/script.seedy-gold-seahorse.sh
+        container: qc.uni_flimsy-sapphire-chinchilla
   QC.Ver:
     repos:
       github.com/TheIdentitySelector/thiss-js get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-magenta-argentino.sh
-        container: qc.ver_woolly-buff-mongrel
+        - /usr/bin/env sh .sqa/script.cheeky-coral-bracke.sh
+        container: qc.ver_snazzy-cornflower-deer
 timeout: 5400

@@ -5,5 +5,5 @@
 
 (
 cd github.com/TheIdentitySelector/thiss-js &&
-    licensee detect . --confidence 60 --json
+    git rev-parse --is-inside-work-tree 
 )
